@@ -1,0 +1,78 @@
+@import "nord.css";
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 18px;
+  border: none;
+  min-height: 28px;
+}
+
+#workspaces button {
+  color: @nord6;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  background: @nord1;
+}
+
+#workspaces button.active {
+  background: @nord8;
+  color: @nord1;
+}
+
+#workspaces button:hover {
+  background: @nord4;
+  color: @nord1; 
+}
+
+#image, #workspaces  {
+  background: @nord1;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+#clock {
+  color: @nord6;
+  background: @nord1;
+  padding: 5px 5px;
+}
+
+#tray {
+  color: @nord6;
+  background: @nord1;
+  padding: 5px 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#pulseaudio, #network, #disk, #memory, #cpu, #custom-pacman {
+  color: @nord6;
+  background: @nord1;
+  padding: 5px 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#mpris {
+  color: @nord1;
+  background: @nord8;
+  margin-right: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+}
+
+#custom-os_button {
+  color: @nord6;
+  background: @nord1;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#window {
+  background: @nord1;
+  margin-left: 15px;
+}

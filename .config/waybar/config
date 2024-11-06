@@ -1,0 +1,128 @@
+{
+  "layer":"top",
+  "modules-left":[
+    "custom/os_button",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center":[
+    "clock"
+  ],
+  "modules-right":[
+    "mpris",
+    "pulseaudio",
+    "network",
+    "disk",
+    "cpu",
+    "memory",
+    "custom/pacman",
+    "tray"
+  ],
+  "custom/os_button":{
+    "format":"󰣇",
+    "on-click":"rofi -show drun || pkill rofi"
+  },
+  "hyprland/workspaces":{
+    "format":"{icon}",
+    "format-icons": {
+      "7": "󰖲",
+      "8": "󰟔",
+      "9": "󰖳",
+      "10": "󰓇"
+    }
+  },
+  "hyprland/window":{
+    "format":"{title}",
+    "max-length":50,
+    "format": "  {}"
+  },
+  "clock":{
+    "format":"{:%H:%M}",
+    "format-alt": "{:%a, %d. %b %Y - %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "locale": "en_GB.UTF-8",
+    "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#a3be8c'><b>{}</b></span>",
+                              "days":       "<span color='#d8dee9'><b>{}</b></span>",
+                              "weekdays":   "<span color='#b48ead'><b>{}</b></span>",
+                              "today":      "<span color='#ebcb8b'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+  },
+  "mpris": {
+    "format": "{status_icon} {title} - {artist}",
+    "max-length": 50,
+    "status-icons": {
+      "playing": "󰐊",
+      "paused": "󰏤"
+    },
+    "interval": 1,
+    "ignored-players": [
+      "firefox",
+      "thorium",
+      "plasma-browser-integration"
+    ]
+  },
+  "pulseaudio": {
+     "format": "{icon} {volume}%",
+     "format-bluetooth": " {volume}%",
+     "format-muted": "",
+     "format-icons": {
+         "headphone": "",
+          "default": ["", "", " "]      },
+      "scroll-step": 1,
+      "max-volume": 100,
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "ignored-sinks": [
+          "Easy Effects Sink"
+      ]
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": " &#8239;{signalStrength}%",
+        "format-ethernet": "󰊗 {ipaddr}/{cidr}",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "nm-connection-editor"
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+        "path": "/"
+    },
+    "cpu": {
+        "format": "CPU&#8239;{usage}%"
+    },
+    "memory": {
+        "format": "RAM&#8239;{}%"
+    },
+    "custom/pacman": {
+    "format": "󰮯 {}",
+    "interval": 3600,                     // every hour
+    "exec": "checkupdates | wc -l",       // # of updates
+    "exec-if": "exit 0",                  // always run; consider advanced run conditions
+    "on-click": "kitty -e 'yay'; pkill -SIGRTMIN+8 waybar", // update system
+    "signal": 8
+    },
+    "tray": {
+    "icon-size": 20,
+    "spacing": 10
+  },
+}
+
