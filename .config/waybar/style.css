@@ -1,10 +1,10 @@
 @import "nord.css";
 
-* {
+#waybar {
   font-family: JetBrainsMono Nerd Font;
   font-size: 18px;
   border: none;
-  min-height: 28px;
+  background: @nord1;
 }
 
 #workspaces button {
@@ -13,7 +13,6 @@
   margin-right: 5px;
   border-radius: 5px;
   padding: 0px 10px 0px 10px;
-  background: @nord1;
 }
 
 #workspaces button.active {
