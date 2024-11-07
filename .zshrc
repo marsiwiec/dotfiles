@@ -10,6 +10,9 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 # Shortcuts
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
