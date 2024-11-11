@@ -45,7 +45,7 @@
   margin-left: 10px;
 }
 
-#pulseaudio, #network, #disk, #memory, #cpu, #custom-pacman {
+#pulseaudio, #network, #disk, #memory, #cpu, #custom-pacman, #idle_inhibitor {
   color: @nord6;
   background: @nord1;
   padding: 5px 5px;
@@ -74,4 +74,18 @@
 #window {
   background: @nord1;
   margin-left: 15px;
+}
+
+#idle_inhibitor.deactivated {
+  margin: 5px 5px 5px 5px;
+  border-radius: 5px;
+  padding: 0px 5px 0px 5px;
+}
+
+#idle_inhibitor.activated {
+  background: @nord8;
+  color: @nord1;
+  margin: 5px 5px 5px 5px;
+  border-radius: 5px;
+  padding: 0px 5px 0px 5px;
 }

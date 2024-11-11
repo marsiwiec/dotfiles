@@ -15,6 +15,7 @@
     "disk",
     "cpu",
     "memory",
+    "idle_inhibitor",
     "custom/pacman",
     "tray"
   ],
@@ -103,14 +104,14 @@
     },
     "disk": {
         "interval": 30,
-        "format": " {percentage_used}%",
+        "format": " &#8239;{percentage_used}%",
         "path": "/"
     },
     "cpu": {
-        "format": "CPU&#8239;{usage}%"
+        "format": " &#8239;{usage}%"
     },
     "memory": {
-        "format": "RAM&#8239;{}%"
+        "format": " &#8239;{}%"
     },
     "custom/pacman": {
         "format": "󰮯 {}",
@@ -123,6 +124,14 @@
     "tray": {
         "icon-size": 20,
         "spacing": 15
-  },
+    },
+    "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": " ",
+        "deactivated": " "
+    }
+    }
+
 }
 
