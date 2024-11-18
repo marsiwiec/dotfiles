@@ -10,7 +10,7 @@
 #image, #workspaces  {
   background: @nord1;
   border-radius: 0.25em;
-  padding: 0.25em 0.25em;
+  padding: 0.4em 0.4em;
 }
 
 #workspaces button {
